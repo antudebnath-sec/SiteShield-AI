@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "SiteShield AI",
+  "version": "1.0.0",
+  "description": "AI-based browser extension that detects phishing and malicious sites locally and explains why.",
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "content_scripts": [
+    { "matches": ["http://*/*", "https://*/*"], "js": ["content.js"], "run_at": "document_idle" }
+  ],
+  "action": {
+    "default_title": "SiteShield AI",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+}

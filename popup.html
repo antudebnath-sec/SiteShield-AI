@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="popup.css"><title>SiteShield AI</title></head>
+<body>
+<header><b>SiteShield AI</b><span id="note"></span></header>
+<main>
+  <div id="card"><div id="dot"></div><div><div id="title">Scanning…</div><div id="host"></div></div></div>
+  <div class="meter"><div id="fill"></div></div>
+  <div id="riskline"></div>
+  <ul id="reasons"></ul>
+  <button id="trust" hidden></button>
+  <hr>
+  <label for="u">Check any URL without visiting it</label>
+  <div class="row"><input id="u" placeholder="https://example.com/login"><button id="go">Check</button></div>
+  <small>Analysis runs locally in your browser. No browsing data is sent anywhere.</small>
+</main>
+<script src="popup.js"></script>
+</body></html>
